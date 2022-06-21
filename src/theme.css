@@ -1,0 +1,94 @@
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(252, 125, 146);
+}
+
+#root {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  place-items: center;
+}
+
+.wrapper {
+  max-height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #fff;
+  filter: drop-shadow(2px 3px 5px rgb(45, 45, 45));
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+}
+.wrapper .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.wrapper .content .avatar-wrapper {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wrapper .content .avatar-wrapper img {
+  object-fit: cover;
+  height: 50px;
+  width: 50px;
+}
+.wrapper .content .user-content {
+  text-transform: capitalize;
+  min-width: 300px;
+  padding: 1rem;
+  line-height: 25px;
+}
+.wrapper .content .user-content span {
+  color: rgb(129, 129, 129);
+}
+.wrapper .content:hover {
+  background-color: #eee;
+}
+.wrapper .button-ctn {
+  display: flex;
+}
+.wrapper .button-ctn button {
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 800;
+  width: 100%;
+  line-height: 30px;
+  background-color: rgb(252, 125, 146);
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.wrapper .button-ctn button:hover {
+  background-color: rgb(250, 135, 154);
+  animation: moveup 1s infinite;
+}
+@keyframes moveup {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+.content-wrapper {
+  margin: 0.7rem 0;
+}
+
+/*# sourceMappingURL=theme.css.map */
